@@ -16,11 +16,10 @@ func NewHandler(dumper service.Dumper) *handler {
 }
 
 func (h *handler) Route(e *echo.Echo) {
-	httpDump := e.Group("/http_dump")
-	httpDump.Any("/dump/:key", h.receiveRequest)
+	e.Any("/dumps/:key", h.receiveRequest)
 
-	api := httpDump.Group("/api")
-	api.GET("/requests/:key", h.listRequests)
+	api := e.Group("/api")
+	api.GET("/dumps/:key", h.listRequests)
 }
 
 func (h *handler) receiveRequest(c echo.Context) error {

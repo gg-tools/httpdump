@@ -1,7 +1,7 @@
-FROM golang:1.16-alpine AS builder
+FROM arm64v8/golang:1.16-alpine AS builder
 ENV CGO_ENABLED=0
 ENV GOOS=linux
-ENV GOARCH=amd64
+ENV GOARCH=arm64
 ENV GO111MODULE=on
 ENV GOPRIVATE=""
 ENV GOPROXY="https://goproxy.cn,direct"
@@ -13,7 +13,7 @@ RUN go mod download \
     && go test --cover $(go list ./... | grep -v /vendor/) \
     && go build -o main cmd/main.go
 
-FROM alpine
+FROM arm64v8/alpine
 WORKDIR /root/
 ENV TZ Asia/Shanghai
 
