@@ -1,6 +1,6 @@
 package service
 
-import "github.com/gg-tools/http-dump/model"
+import "github.com/gg-tools/httpdump/model"
 
 type Dumper interface {
 	DumpRequest(dumpKey string, request *model.Request) error

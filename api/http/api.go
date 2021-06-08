@@ -1,8 +1,8 @@
 package http
 
 import (
-	"github.com/gg-tools/http-dump/model"
-	"github.com/gg-tools/http-dump/model/service"
+	"github.com/gg-tools/httpdump/model"
+	"github.com/gg-tools/httpdump/model/service"
 	"github.com/labstack/echo/v4"
 	"io/ioutil"
 )

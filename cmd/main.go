@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/gg-tools/http-dump/api/http"
-	"github.com/gg-tools/http-dump/model/repository"
-	"github.com/gg-tools/http-dump/model/service"
-	"github.com/gg-tools/http-dump/utils"
+	"github.com/gg-tools/httpdump/api/http"
+	"github.com/gg-tools/httpdump/model/repository"
+	"github.com/gg-tools/httpdump/model/service"
+	"github.com/gg-tools/httpdump/utils"
 	log "github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"

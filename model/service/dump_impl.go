@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/gg-tools/http-dump/model"
-	"github.com/gg-tools/http-dump/model/repository"
+	"github.com/gg-tools/httpdump/model"
+	"github.com/gg-tools/httpdump/model/repository"
 	"time"
 )
 

@@ -2,7 +2,7 @@ package http
 
 import (
 	"encoding/json"
-	"github.com/gg-tools/http-dump/utils"
+	"github.com/gg-tools/httpdump/utils"
 	"github.com/labstack/echo/v4"
 	"net/http"
 )

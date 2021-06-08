@@ -7,7 +7,7 @@ ENV GOPRIVATE=""
 ENV GOPROXY="https://goproxy.cn,direct"
 ENV GOSUMDB="sum.golang.google.cn"
 
-WORKDIR /root/http-dump/
+WORKDIR /root/httpdump/
 ADD . .
 RUN go mod download \
     && go test --cover $(go list ./... | grep -v /vendor/) \
@@ -20,7 +20,7 @@ ENV TZ Asia/Shanghai
 RUN sed -e 's/dl-cdn[.]alpinelinux.org/mirrors.aliyun.com/g' -i~ /etc/apk/repositories
 RUN apk --no-cache add curl
 
-COPY --from=builder /root/http-dump/main httpdump
+COPY --from=builder /root/httpdump/main httpdump
 RUN chmod +x httpdump
 
 ENTRYPOINT ["/root/httpdump"]

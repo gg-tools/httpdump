@@ -1,4 +1,4 @@
-module github.com/gg-tools/http-dump
+module github.com/gg-tools/httpdump
 
 go 1.13
 

@@ -1,7 +1,7 @@
 package http
 
 import (
-	"github.com/gg-tools/http-dump/model"
+	"github.com/gg-tools/httpdump/model"
 	"net/http"
 	"strings"
 	"time"
